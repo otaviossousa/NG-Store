@@ -1,12 +1,54 @@
-.logo-ng-store {
-    width: 150px;
-    height: auto; /* Mantém a proporção */
+header{
+    background-color: #1E1E1E;
+    color: white;
 }
 
-.navbar-custom {
-    background-color: #1E1E1E !important; /* Usa !important para garantir que a cor seja aplicada */
-  }
+.nav-item a{
+    color: white;
+}
 
-.navbar-custom .navbar-brand {
-    color: #FFFFFF; /* Cor do texto */
+.nav-item a:hover{
+    color: #00a000;
+}
+
+.header-site-logo img {
+    width: 80px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container > div {
+    margin: 0 10px;
+}
+
+.search-bar {
+    flex-grow: 2; /* Aumenta ainda mais o crescimento da barra de pesquisa */
+    margin: 0 20px; /* Adiciona margem para espaçamento */
+    min-width: 200px; /* Define uma largura mínima maior para a barra de pesquisa */
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    margin-right: 10px;
+    min-width: 200px; /* Define uma largura mínima maior para o campo de entrada */
+}
+
+.icons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os ícones */
+}
+
+.icons img {
+    width: 40px; /* Ajuste o tamanho dos ícones conforme necessário */
+    height: auto;
 }

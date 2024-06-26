@@ -12,46 +12,85 @@
 </head>
 <body>
 
-  <!-- USE O FRAMEWORK BOOTSTRAP-->
   <!-- Cabeçalho-->
   <header>
-    <div class="navbar navbar-expand-lg navbar-custom">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img class="logo-ng-store" src="/imagens/logo-ng-store.png" alt="Logo da Loja">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
+    <!-- Primeiro Container-->
+    <div class="container">
+        <!-- Logo da loja-->
+        <div class="header-site-logo">
+            <a href="sitedaloja">
+                <img id="logo-ng-store" src="/imagens/logo-ng-store.png" alt="Logo da Loja">
+            </a>
+        </div>
+  
         <!-- Barra de Pesquisa-->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <form class="d-flex">
-                <input class="form-control me-1" type="search" placeholder="Pesquisar produto" aria-label="Pesquisar">
+        <div class="search-bar">
+            <form class="d-flex">
+                <input class="form-control me-1" type="search" placeholder="Digite o que você procura..." aria-label="Pesquisar">
                 <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-              </form>
-            </li>
-
-        <!--Login-->
-        <div class="login">
-          <span class="icone-login">
-            <img src="/imagens/icone-login.png" alt="Ícone de Login">
-          </span>
+            </form>
         </div>
-
-        <!--Carrinho-->
-        <div class="carrinho">
-          <span class="icone-carrinho">
-            <img src="/imagens/icone-carrinho.png" alt="Ícone de Carrinho">
-          </span>
-            
+  
+        <!-- Ícones (Login, Favoritos, Carrinho) -->
+        <div class="icons">
+            <div class="login-icon">
+                <a href="/login.html">
+                    <img src="/imagens/icone-login.png" alt="Ícone Login">
+                </a>
+            </div>
+  
+            <div class="favorites-icon">
+                <a href="/favoritos.html">
+                    <img src="/imagens/icone-favoritos.png" alt="Ícone Favoritos">
+                </a>
+            </div>
+  
+            <div class="cart-icon">
+                <a href="/carrinho.html">
+                    <img src="/imagens/icone-carrinho.png" alt="Ícone Carrinho">
+                </a>
+            </div>
         </div>
+    </div>
 
-      
-      </div>
-    </nav>
+    <!-- Segundo Container-->
+    <div class="container">
+        <!-- Menu de Categorias-->
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+  
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categoria1.html">Categoria 1</a>
+                        </li>
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categoria2.html">Categoria 2</a>
+                        </li>
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categoria3.html">Categoria 3</a>
+                        </li>
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categoria4.html">Categoria 4</a>
+                        </li>
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categoria5.html">Categoria 5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
   </header>
 
   <!-- Conteúdo-->
