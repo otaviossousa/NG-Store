@@ -1,0 +1,12 @@
+.logo-ng-store {
+    width: 150px;
+    height: auto; /* Mantém a proporção */
+}
+
+.navbar-custom {
+    background-color: #1E1E1E !important; /* Usa !important para garantir que a cor seja aplicada */
+  }
+
+.navbar-custom .navbar-brand {
+    color: #FFFFFF; /* Cor do texto */
+}

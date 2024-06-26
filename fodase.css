@@ -1,0 +1,32 @@
+#logo-ng-store {
+    width: 150px;
+    height: auto; /* Mantém a proporção */
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+}
+
+.container > div {
+    margin: 0 5px; /* Adiciona uma margem entre os itens */
+}
+
+.header-site-logo img, .login-icon img, .favorites-icon img, .cart-icon img {
+    width: 40px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: auto;
+}
+
+.search-bar {
+    flex-grow: 1; /* Faz a barra de pesquisa crescer para ocupar o espaço disponível */
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+}
+
+header{
+    background-color: #1E1E1E;
+}
