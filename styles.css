@@ -3,11 +3,11 @@ header{
     color: white;
 }
 
-.nav-item a{
+.nav-item a {
     color: white;
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
     color: #00a000;
 }
 
@@ -20,6 +20,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 0; /* Adiciona espaçamento vertical */
 }
 
 .container > div {
@@ -51,4 +52,59 @@ header{
 .icons img {
     width: 40px; /* Ajuste o tamanho dos ícones conforme necessário */
     height: auto;
+}
+
+.search-bar {
+    position: relative; /* Define o contêiner como referência para posicionamento absoluto */
+}
+
+.search-bar input {
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    padding-right: 40px; /* Adiciona espaço suficiente para o ícone dentro do input */
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* Ajuste a posição horizontal do ícone */
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza o ícone verticalmente */
+    cursor: pointer; /* Adiciona um cursor de ponteiro para o ícone */
+}
+
+.navbar-nav .nav-link {
+    margin-right: 80px; /* Ajuste o espaçamento entre os links do menu */
+}
+
+.hearder-main-menu-button {
+    display: flex;
+    align-items: center;
+}
+
+/* Adiciona flexbox ao segundo container */
+.second-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+/* --------------------------------------------------------------Footer--------------------------------------------------------------- */
+
+.Farticle-FooterSubMenu {
+    background-color: #212121;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.footer h4 {
+    color: #00a000;
+}
+
+.custom-gx > .col-xs-12, .custom-gx > [class*="col-"] {
+    padding-top: 20px; /* Aumenta o espaçamento acima */
+    padding-right: 85px; /* Aumenta o espaçamento à direita */
+    padding-left: 85px; /* Aumenta o espaçamento à esquerda */
 }
