@@ -1,14 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>NG Store</title>
 </head>
 <body>
-    <h1>PAGINA DE LOGIN</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae temporibus natus necessitatibus, recusandae saepe quaerat officiis dolore rem optio quasi harum eaque nulla. Tenetur, sapiente aliquid maiores ex minus qui cum incidunt delectus odit corporis voluptates iure commodi aliquam totam, ipsa nemo molestiae animi. Quidem vitae labore molestiae ipsa, obcaecati voluptatibus. Perferendis modi itaque officiis dolores voluptates corporis, odit quasi provident, fugiat animi voluptate repellendus voluptas tempora quia? Quo asperiores illum animi, porro natus quaerat possimus dolorum voluptatem beatae libero fugit quae omnis temporibus veritatis maiores ipsam a, facere facilis rem ratione itaque adipisci sequi. Vero minima alias ab! Laborum!
-    </p>
+    <div class="header">
+        <!-- Cabeçalho-->
+        <header>
+            <!-- Primeiro Container-->
+            <div class="container">
+                <!-- Logo da loja-->
+                <div class="header-site-logo">
+                    <a href="sitedaloja">
+                        <img id="logo-ng-store" src="/imagens/logo-ng-store.png" alt="Logo da Loja">
+                    </a>
+                </div>
+        
+                <!-- Barra de Pesquisa-->
+                <div class="container">
+                    <!-- Barra de Pesquisa-->
+                    <div class="search-bar">
+                        <form class="d-flex">
+                            <input class="form-control me-1" type="search" placeholder="Digite o que você procura..." aria-label="Pesquisar">
+                            <img src="/imagens/icone-pesquisa.png" alt="Ícone Pesquisa" class="search-icon">
+                        </form>
+                    </div>
+                </div>        
+        
+                <!-- Ícones (Login, Favoritos, Carrinho) -->
+                <div class="icons">
+                    <div class="login-icon">
+                        <a href="/login.html">
+                            <img src="/imagens/icone-login.png" alt="Ícone Login">
+                        </a>
+                    </div>
+        
+                    <div class="favorites-icon">
+                        <a href="/favoritos.html">
+                            <img src="/imagens/icone-favoritos.png" alt="Ícone Favoritos">
+                        </a>
+                    </div>
+        
+                    <div class="cart-icon">
+                        <a href="/carrinho.html">
+                            <img src="/imagens/icone-carrinho.png" alt="Ícone Carrinho">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo Container-->
+            <div class="container second-container">
+                <!-- Menu de Departamentos-->
+                <div class="hearder-main-menu-button">
+                    <button id="btnzin" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                            aria-controls="offcanvasWithBothOptions">
+                            <img src="/imagens/icone-menu.png" alt="Ícone Menu">
+                    </button>
+                        <span> <label for="btnzin"></label> DEPARTAMENTOS</span>
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                            aria-labelledby="offcanvasWithBothOptionsLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <p>Try scrolling the rest of the page to see this option in action.</p>
+                            </div>
+                        </div>
+                </div>
+
+                <!-- Menu de Categorias-->
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link px-3" href="/categoria1.html">PROMOÇÕES</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3" href="/categoria2.html">NOTEBOOKS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3" href="/categoria3.html">PC GAMER</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3" href="/categoria4.html">JOGOS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3" href="/categoria5.html">ATENDIMENTO</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+  
+
+    
+    <div class="main">
+    <!-- Conteúdo-->
+    <main>
+        <h1> Login</h1>
+      </main>
+    </div>
+  
+    <div class="footer">
+        <div class="Fsection">
+            <div class="Farticle-FooterSubMenu">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="row gx-5 custom-gx">
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                            <h4>Institucional</h4>
+                            <p>>Quem somos</p>
+                            <p>>Termos e Condições</p>
+                            <p>>Segurança e Privacidade</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                            <h4>Dúvidas</h4>
+                            <p>>Como comprar</p>
+                            <p>>Prazos e entregas</p>
+                            <p>>Formas de Pagamento</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                            <h4>Cliente</h4>
+                            <p>>Minha conta</p>
+                            <p>>Meus pedidos</p>
+                            <p>>Meus tickets</p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                            <h4>Contato</h4>
+                            <p>>atendimento@ngstore.com.br</p>
+                            <p>>0800 4002-8922</p>
+                            <p>>Fale conosco</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Farticle-FooterSocial">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>Siga-nos nas redes sociais</h4>
+                            <ul class="list-inline justify-content-center">
+                                <li class="list-inline-item me-4">
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="/imagens/icone-facebook.png" alt="Ícone Facebook">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <img src="/imagens/icone-instagram.png" alt="Ícone Instagram">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="https://www.twitter.com/" target="_blank">
+                                        <img src="/imagens/icone-twitter.png" alt="Ícone Twitter">
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <img src="/imagens/icone-youtube.png" alt="Ícone Youtube">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- Rodapé-->
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 d-flex flex-column align-items-center">
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><img src="/imagens/logo-ng-store.png" alt="NGStore"></li>
+                        <li class="Cinza mb-1">NG STORE VAREJO DE PRODUTOS DE INFORMATICA LTDA</li>
+                        <li class="Cinza mb-3">CNPJ: 02.933.972/0001-98 | Curitiba-PR</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="mb-1">ATENDIMENTO <br> De segunda a sexta das 8:30 às 12H / 13H às 18H</li>
+                        <li class="mb-1">0800 4002-8922</li>
+                        <li class="mb-3">atendimento@ngstore.com.br</li>
+                        <li class="Cinza">E-COMMERCE E ATENDIMENTO LOCAL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>    
 </body>
 </html>

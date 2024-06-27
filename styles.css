@@ -108,3 +108,40 @@ header{
     padding-right: 85px; /* Aumenta o espaçamento à direita */
     padding-left: 85px; /* Aumenta o espaçamento à esquerda */
 }
+
+.Farticle-FooterSocial{
+    background-color: #262626;
+}
+
+footer {
+    background-color: #212121;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+footer ul li {
+    list-style-type: none;
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+footer ul li img {
+    max-width: 100px; /* Ajustar o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+footer .Cinza {
+    color: #cccccc;
+}
+
+/* Para garantir que o conteúdo esteja sempre centralizado */
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
