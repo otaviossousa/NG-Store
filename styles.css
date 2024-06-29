@@ -1,4 +1,6 @@
-header{
+/* --------------------------------------------------------------< Header >------------------------------------------------------------- */
+
+header {
     background-color: #1E1E1E;
     color: white;
 }
@@ -87,10 +89,36 @@ header{
     justify-content: space-between;
     width: 100%;
 }
+/* ------------------------------------------------------------< Main >--------------------------------------------------------------- */
 
+body main {
+    background-color: #21224e;
+    color: white; /* Opcional: ajusta a cor do texto para melhor contraste */
+    font-family: Arial, sans-serif; /* Certifique-se de que a fonte seja consistente */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Garante que o preenchimento e a borda sejam incluídos na largura total e altura dos elementos */
+}
 
-/* --------------------------------------------------------------Footer--------------------------------------------------------------- */
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* -----------------------------------------------------------< Footer >------------------------------------------------------------- */
 .Farticle-FooterSubMenu {
     background-color: #212121;
     color: #ffffff;
@@ -99,22 +127,45 @@ header{
     padding: 10px 0;
 }
 
+.Farticle-FooterSubMenu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.Farticle-FooterSubMenu ul li {
+    display: flex;
+    align-items: center; /* Alinha os itens horizontalmente */
+    list-style-type: none;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap; /* Impede a quebra de linha */
+    margin-bottom: 5px; /* Adiciona um pequeno espaço entre os itens */
+}
+
+.Farticle-FooterSubMenu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
 .footer h4 {
     color: #00a000;
+    text-align: left; /* Alinha o título à esquerda */
 }
 
 .custom-gx > .col-xs-12, .custom-gx > [class*="col-"] {
     padding-top: 20px; /* Aumenta o espaçamento acima */
     padding-right: 85px; /* Aumenta o espaçamento à direita */
     padding-left: 85px; /* Aumenta o espaçamento à esquerda */
+    text-align: left; /* Garante que os conteúdos das colunas fiquem alinhados à esquerda */
 }
 
-.Farticle-FooterSocial{
+.Farticle-FooterSocial {
     background-color: #262626;
 }
 
 footer {
-    background-color: #212121;
+    background-color: #000000;
     color: #ffffff;
     padding: 20px 0;
 }

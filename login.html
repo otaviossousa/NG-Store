@@ -56,9 +56,10 @@
                 </div>
             </div>
 
-            <!-- Segundo Container-->
+            <!-- Segundo Container -->
             <div class="container second-container">
-                <!-- Menu de Departamentos-->
+                
+                <!-- Menu de Departamentos -->
                 <div class="hearder-main-menu-button">
                     <button id="btnzin" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
                             aria-controls="offcanvasWithBothOptions">
@@ -77,7 +78,7 @@
                         </div>
                 </div>
 
-                <!-- Menu de Categorias-->
+                <!-- Menu de Categorias -->
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -110,48 +111,118 @@
         </header>
     </div>
   
-
     
     <div class="main">
-    <!-- Conteúdo-->
-    <main>
-        <h1> Login</h1>
-      </main>
+    <!-- Conteúdo -->
+        <main>
+            <div class="container d-flex justify-content-center align-items-center min-vh-00">
+                <div class="card p-4" style="width: 400px;">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Login</h3>
+                        <form id="loginForm" action="/login" method="POST">
+                            <div class="mb-3">
+                                <label for="email" class="form-label"><img src="/imagens/icone-usuario.png" alt="icone-usuario"> Usuário</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="E-mail, CPF ou CNPJ" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label"><img src="/imagens/icone-cadeado.png" alt="icone-cadeado">Senha</label>
+                                <input type="password" class="form-control" id="password" name="password"  placeholder="Insira sua senha"required >
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </div>
+                            <p class="mt-3 text-center">
+                                <a href="/recuperar-senha.html">Esqueceu a senha?</a>
+                            </p>
+                            <p class="text-center">
+                                Não tem uma conta? <a href="/cadastro.html">Cadastre-se</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  
+    
+    <!-- Seção do Rodapé -->
     <div class="footer">
         <div class="Fsection">
+            <!-- Sub-Menu-->
             <div class="Farticle-FooterSubMenu">
                 <div class="container d-flex justify-content-center align-items-center">
                     <div class="row gx-5 custom-gx">
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                             <h4>Institucional</h4>
-                            <p>>Quem somos</p>
-                            <p>>Termos e Condições</p>
-                            <p>>Segurança e Privacidade</p>
+                            <ul>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/quemsomos.html">Quem somos</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/termosecondicoes.html">Termos e Condições</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/segurancaeprivacidade.html">Segurança e Privacidade</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                             <h4>Dúvidas</h4>
-                            <p>>Como comprar</p>
-                            <p>>Prazos e entregas</p>
-                            <p>>Formas de Pagamento</p>
+                            <ul>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/como-comprar.html">Como comprar</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/prazos-e-entregas.html">Prazos e entregas</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/formas-de-pagamento.html">Formas de Pagamento</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                             <h4>Cliente</h4>
-                            <p>>Minha conta</p>
-                            <p>>Meus pedidos</p>
-                            <p>>Meus tickets</p>
+                            <ul>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/login.html">Minha conta</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/cadastro.html">Meus pedidos</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="/carrinho.html">Meus tickets</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                             <h4>Contato</h4>
-                            <p>>atendimento@ngstore.com.br</p>
-                            <p>>0800 4002-8922</p>
-                            <p>>Fale conosco</p>
+                            <ul>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="atendimento.html">atendimento@ngstore.com.br</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="#">0800 4002-8922</a>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                                    <a href="fale-conosco.html">Fale conosco</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <!-- Redes Sociais-->
             <div class="Farticle-FooterSocial">
                 <div class="container d-flex justify-content-center align-items-center">
                     <div class="row">
@@ -187,6 +258,7 @@
     </div>
     <!-- Rodapé-->
     <footer>
+        <!-- Informações da loja-->
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-12 d-flex flex-column align-items-center">
