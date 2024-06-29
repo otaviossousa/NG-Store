@@ -95,8 +95,7 @@ body main {
     background-color: #21224e;
     color: white; /* Opcional: ajusta a cor do texto para melhor contraste */
     font-family: Arial, sans-serif; /* Certifique-se de que a fonte seja consistente */
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o preenchimento padrão */
+    padding: 60px; /* Remove o preenchimento padrão */
     box-sizing: border-box; /* Garante que o preenchimento e a borda sejam incluídos na largura total e altura dos elementos */
 }
 
@@ -109,13 +108,39 @@ body main {
     font-size: 1.5rem;
 }
 
-.btn-primary {
-    background-color: #007bff;
+.btn-custom {
+    background-color: #00a000 !important; /* Cor de fundo */
+    color: white !important; /* Cor do texto */
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Espaçamento entre o texto e o ícone */
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
+.btn-custom img.btn-icon {
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+}
+
+.btn-custom:hover {
+    background-color: #007a00 !important; /* Cor de fundo ao passar o mouse */
+}
+
+.custom-link {
+    color: #00a000 !important; /* Cor do link */
+}
+
+.custom-link:hover {
+    color: #007a00 !important; /* Cor do link ao passar o mouse */
+    text-decoration: underline;
+}
+
+.form-icon {
+    width: 30px; /* Ajuste conforme necessário */
+    height: 30px; /* Ajuste conforme necessário */
+    margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+    vertical-align: middle; /* Alinhamento vertical */
 }
 
 /* -----------------------------------------------------------< Footer >------------------------------------------------------------- */
