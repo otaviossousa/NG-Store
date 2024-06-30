@@ -179,23 +179,21 @@ body main {
 
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
 .products-cards {
-    padding: 20px;
-    background-color: #21224e;
+    background-color: #262626;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  .grid {
+    display: grid;
+    gap: 20px;
   }
   
   .products-dock-header {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 20px;
   }
   
-  .products-dock-header > div {
+  .products-dock-header div {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -211,12 +209,11 @@ body main {
   .products-dock-subtitle {
     font-size: 1.2em;
     color: #ffffff;
-    margin-top: 10px;
   }
   
   .btn__primary {
     background-color: #007bff;
-    color: rgb(255, 255, 255);
+    color: white;
     border: none;
     padding: 8px 16px;
     text-decoration: none;
@@ -228,7 +225,7 @@ body main {
     background-color: #0056b3;
   }
   
-  .products-dock-main {
+  .product-card-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -240,10 +237,10 @@ body main {
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    background-color: #262626;
+    background-color: white;
     text-decoration: none;
     color: inherit;
-    width: calc(25% - 20px); /* Ajuste a largura conforme necessário */
+    width: calc(25% - 20px);
   }
   
   .product-img img {
@@ -268,7 +265,7 @@ body main {
   .product-title {
     font-size: 1.1em;
     font-weight: bold;
-    color: #fffdfd;
+    color: #333;
   }
   
   .product-card--footer {
@@ -294,7 +291,7 @@ body main {
   
   .product-discount__price {
     font-size: 1.2em;
-    color: #ffffff;
+    color: #333;
   }
   
   .product-button {
@@ -310,23 +307,18 @@ body main {
     background-color: #218838;
   }
   
-  @media (max-width: 1024px) {
-    .product-card-wrapper {
-      width: calc(33.333% - 20px); /* 3 cards por linha em telas médias */
-    }
-  }
-  
   @media (max-width: 768px) {
     .product-card-wrapper {
-      width: calc(50% - 20px); /* 2 cards por linha em telas pequenas */
+      width: calc(50% - 20px);
     }
   }
   
   @media (max-width: 480px) {
     .product-card-wrapper {
-      width: 100%; /* 1 card por linha em telas muito pequenas */
+      width: 100%;
     }
   }
+
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
 
 /* -----------------------------------------------------------< Footer >------------------------------------------------------------- */

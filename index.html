@@ -1,253 +1,468 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <title>NG Store</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <title>NG Store Home</title>
+  </head>
+  <body>
     <div class="header">
-        <!-- Cabeçalho-->
-        <header>
-            <!-- Primeiro Container-->
+      <!-- Cabeçalho-->
+      <header>
+        <!-- Primeiro Container-->
+        <div class="container-header container">
+          <!-- Logo da loja-->
+          <div class="header-site-logo">
+            <a href="/index.html">
+              <img
+                id="logo-ng-store"
+                src="/imagens/logo-ng-store.png"
+                alt="Logo da Loja"
+              />
+            </a>
+          </div>
+
+          <!-- Barra de Pesquisa-->
+          <div class="container">
+            <!-- Barra de Pesquisa-->
+            <div class="search-bar">
+              <form class="d-flex">
+                <input
+                  class="form-control me-1"
+                  type="search"
+                  placeholder="Digite o que você procura..."
+                  aria-label="Pesquisar"
+                />
+                <img
+                  src="/imagens/icone-pesquisa.png"
+                  alt="Ícone Pesquisa"
+                  class="search-icon"
+                />
+              </form>
+            </div>
+          </div>
+
+          <!-- Ícones (Login, Favoritos, Carrinho) -->
+          <div class="icons">
+            <div class="login-icon">
+              <a href="/login.html">
+                <img src="/imagens/icone-login.png" alt="Ícone Login" />
+              </a>
+            </div>
+
+            <div class="favorites-icon">
+              <a href="/favoritos.html">
+                <img src="/imagens/icone-favoritos.png" alt="Ícone Favoritos" />
+              </a>
+            </div>
+
+            <div class="cart-icon">
+              <a href="/carrinho.html">
+                <img src="/imagens/icone-carrinho.png" alt="Ícone Carrinho" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segundo Container-->
+        <div class="container second-container">
+          <!-- Menu de Departamentos-->
+          <div class="header-main-menu-button">
+            <button
+              id="btnzin"
+              class="btn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              <img src="/imagens/icone-menu.png" alt="Ícone Menu" />
+            </button>
+            <span>DEPARTAMENTOS</span>
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="offcanvasWithBothOptions"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Backdrop with scrolling
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <p>
+                  Try scrolling the rest of the page to see this option in
+                  action.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Menu de Categorias-->
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link px-3" href="/categoria1.html"
+                      >PROMOÇÕES</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-3" href="/categoria2.html"
+                      >NOTEBOOKS</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-3" href="/categoria3.html"
+                      >PC GAMER</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-3" href="/categoria4.html">JOGOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link px-3" href="/categoria5.html"
+                      >ATENDIMENTO</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+    <div class="main">
+      <!-- Conteúdo-->
+      <main>
+        <div class="products-cards">
             <div class="container">
-                <!-- Logo da loja-->
-                <div class="header-site-logo">
-                    <a href="/index.html">
-                        <img id="logo-ng-store" src="/imagens/logo-ng-store.png" alt="Logo da Loja">
+              <!-- Inicio da Seção Titulo -->
+              <header class="products-dock-header">
+                <div>
+                  <h2 class="products-dock-title"> Warner</h2>
+                  <a class="btn btn__primary btn__small" href="/vermais.html">Ver mais</a>
+                </div>
+                <h3 class="products-dock-subtitle"> Jogos com até 90% de desconto!</h3>
+              </header>
+              <!-- Fim da Seção Titulo -->
+          
+              <!-- Informaçoes do Produto -->
+              <div class="products-dock-main">
+                <!-- Primeiro Jogo-->
+                <div class="product-card-wrapper">
+                  <a class="product-card" title="Lego Star Wars: The Sktwalker Saga" href="/link-jogo.html">
+                    <div class="product-img">
+                      <img alt="LEGO Star Wars™: The Skywalker Saga" src="/imagens/games/logo-star-wars.jpg">
+                      <div class="wishlist--btn" data-component="card-wishlist-btn">
+                        <div class="wishlist--btn--icon">
+                          <i class="icon icon-favorite-o"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Conteudo do card-->
+                    <div class="product-card--content">
+                      <div class="product-card--content-wrapper">
+                        <h3 class="product-title single-line-name">LEGO Star Wars™: The Skywalker Saga</h3>
+                      </div>
+                    </div>
+                    <div class="product-card--footer">
+                      <span class="product-discount">
+                        <span class="product-discount__badge">-10%</span>
+                        <span class="product-discount__price">R$ 179,99</span>
+                      </span>
+                      <button class="product-button">
+                        <span class="product-button--text">Comprar</span>
+                      </button>
+                    </div>
+                  </a>
+                </div>
+                
+                <!-- Segundo Jogo -->
+                <div class="product-card-wrapper">
+                    <a class="product-card" title="Lego Star Wars: The Sktwalker Saga" href="/link-jogo.html">
+                      <div class="product-img">
+                        <img alt="LEGO Star Wars™: The Skywalker Saga" src="/imagens/games/logo-star-wars.jpg">
+                        <div class="wishlist--btn" data-component="card-wishlist-btn">
+                          <div class="wishlist--btn--icon">
+                            <i class="icon icon-favorite-o"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Conteudo do card-->
+                      <div class="product-card--content">
+                        <div class="product-card--content-wrapper">
+                          <h3 class="product-title single-line-name">LEGO Star Wars™: The Skywalker Saga</h3>
+                        </div>
+                      </div>
+                      <div class="product-card--footer">
+                        <span class="product-discount">
+                          <span class="product-discount__badge">-10%</span>
+                          <span class="product-discount__price">R$ 179,99</span>
+                        </span>
+                        <button class="product-button">
+                          <span class="product-button--text">Comprar</span>
+                        </button>
+                      </div>
                     </a>
                 </div>
-        
-                <!-- Barra de Pesquisa-->
-                <div class="container">
-                    <!-- Barra de Pesquisa-->
-                    <div class="search-bar">
-                        <form class="d-flex">
-                            <input class="form-control me-1" type="search" placeholder="Digite o que você procura..." aria-label="Pesquisar">
-                            <img src="/imagens/icone-pesquisa.png" alt="Ícone Pesquisa" class="search-icon">
-                        </form>
-                    </div>
-                </div>        
-        
-                <!-- Ícones (Login, Favoritos, Carrinho) -->
-                <div class="icons">
-                    <div class="login-icon">
-                        <a href="/login.html">
-                            <img src="/imagens/icone-login.png" alt="Ícone Login">
-                        </a>
-                    </div>
-        
-                    <div class="favorites-icon">
-                        <a href="/favoritos.html">
-                            <img src="/imagens/icone-favoritos.png" alt="Ícone Favoritos">
-                        </a>
-                    </div>
-        
-                    <div class="cart-icon">
-                        <a href="/carrinho.html">
-                            <img src="/imagens/icone-carrinho.png" alt="Ícone Carrinho">
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Segundo Container-->
-            <div class="container second-container">
-                <!-- Menu de Departamentos-->
-                <div class="hearder-main-menu-button">
-                    <button id="btnzin" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-                            aria-controls="offcanvasWithBothOptions">
-                            <img src="/imagens/icone-menu.png" alt="Ícone Menu">
-                    </button>
-                        <span> <label for="btnzin"></label> DEPARTAMENTOS</span>
-                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-                            aria-labelledby="offcanvasWithBothOptionsLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                                <p>Try scrolling the rest of the page to see this option in action.</p>
-                            </div>
+                <!-- Terceiro Jogo -->
+                <div class="product-card-wrapper">
+                    <a class="product-card" title="Lego Star Wars: The Sktwalker Saga" href="/link-jogo.html">
+                      <div class="product-img">
+                        <img alt="LEGO Star Wars™: The Skywalker Saga" src="/imagens/games/logo-star-wars.jpg">
+                        <div class="wishlist--btn" data-component="card-wishlist-btn">
+                          <div class="wishlist--btn--icon">
+                            <i class="icon icon-favorite-o"></i>
+                          </div>
                         </div>
-                </div>
-
-                <!-- Menu de Categorias-->
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                      </div>
+                      <!-- Conteudo do card-->
+                      <div class="product-card--content">
+                        <div class="product-card--content-wrapper">
+                          <h3 class="product-title single-line-name">LEGO Star Wars™: The Skywalker Saga</h3>
+                        </div>
+                      </div>
+                      <div class="product-card--footer">
+                        <span class="product-discount">
+                          <span class="product-discount__badge">-10%</span>
+                          <span class="product-discount__price">R$ 179,99</span>
+                        </span>
+                        <button class="product-button">
+                          <span class="product-button--text">Comprar</span>
                         </button>
+                      </div>
+                    </a>
+                </div>
 
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="/categoria1.html">PROMOÇÕES</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="/categoria2.html">NOTEBOOKS</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="/categoria3.html">PC GAMER</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="/categoria4.html">JOGOS</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-3" href="/categoria5.html">ATENDIMENTO</a>
-                                </li>
-                            </ul>
+                <!-- Quarto Jogo -->
+                <div class="product-card-wrapper">
+                    <a class="product-card" title="Lego Star Wars: The Sktwalker Saga" href="/link-jogo.html">
+                      <div class="product-img">
+                        <img alt="LEGO Star Wars™: The Skywalker Saga" src="/imagens/games/logo-star-wars.jpg">
+                        <div class="wishlist--btn" data-component="card-wishlist-btn">
+                          <div class="wishlist--btn--icon">
+                            <i class="icon icon-favorite-o"></i>
+                          </div>
                         </div>
-                    </div>
-                </nav>
+                      </div>
+                      <!-- Conteudo do card-->
+                      <div class="product-card--content">
+                        <div class="product-card--content-wrapper">
+                          <h3 class="product-title single-line-name">LEGO Star Wars™: The Skywalker Saga</h3>
+                        </div>
+                      </div>
+                      <div class="product-card--footer">
+                        <span class="product-discount">
+                          <span class="product-discount__badge">-10%</span>
+                          <span class="product-discount__price">R$ 179,99</span>
+                        </span>
+                        <button class="product-button">
+                          <span class="product-button--text">Comprar</span>
+                        </button>
+                      </div>
+                    </a>
+                </div>
+              </div>
             </div>
-        </header>
+          </div> 
+      </main>
     </div>
-  
-    
-    <div class="main">
-    <!-- Conteúdo-->
-        <main>
-        </main>
-    </div>
-  
+
     <div class="footer">
-        <div class="Fsection">
-            <!-- Sub-Menu-->
-            <div class="Farticle-FooterSubMenu">
-                <div class="container d-flex justify-content-center align-items-center">
-                    <div class="row gx-5 custom-gx">
-                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
-                            <h4>Institucional</h4>
-                            <ul>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/quemsomos.html">Quem somos</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/termosecondicoes.html">Termos e Condições</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/segurancaeprivacidade.html">Segurança e Privacidade</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
-                            <h4>Dúvidas</h4>
-                            <ul>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/como-comprar.html">Como comprar</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/prazos-e-entregas.html">Prazos e entregas</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/formas-de-pagamento.html">Formas de Pagamento</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
-                            <h4>Cliente</h4>
-                            <ul>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/login.html">Minha conta</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/cadastro.html">Meus pedidos</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="/carrinho.html">Meus tickets</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
-                            <h4>Contato</h4>
-                            <ul>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="atendimento.html">atendimento@ngstore.com.br</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="#">0800 4002-8922</a>
-                                </li>
-                                <li>
-                                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
-                                    <a href="fale-conosco.html">Fale conosco</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div class="Fsection">
+        <!-- Sub-Menu-->
+        <div class="Farticle-FooterSubMenu">
+          <div
+            class="container d-flex justify-content-center align-items-center"
+          >
+            <div class="row gx-5 custom-gx">
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                <h4>Institucional</h4>
+                <ul>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/quemsomos.html">Quem somos</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/termosecondicoes.html">Termos e Condições</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/segurancaeprivacidade.html"
+                      >Segurança e Privacidade</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                <h4>Dúvidas</h4>
+                <ul>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/como-comprar.html">Como comprar</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/prazos-e-entregas.html">Prazos e entregas</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/formas-de-pagamento.html">Formas de Pagamento</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                <h4>Cliente</h4>
+                <ul>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/login.html">Minha conta</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/cadastro.html">Meus pedidos</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/carrinho.html">Meus tickets</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
+                <h4>Contato</h4>
+                <ul>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="atendimento.html">atendimento@ngstore.com.br</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="#">0800 4002-8922</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="fale-conosco.html">Fale conosco</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <!-- Redes Sociais-->
-            <div class="Farticle-FooterSocial">
-                <div class="container d-flex justify-content-center align-items-center">
-                    <div class="row">
-                        <div class="col-12">
-                            <h4>Siga-nos nas redes sociais</h4>
-                            <ul class="list-inline justify-content-center">
-                                <li class="list-inline-item me-4">
-                                    <a href="https://www.facebook.com/" target="_blank">
-                                        <img src="/imagens/icone-facebook.png" alt="Ícone Facebook">
-                                    </a>
-                                </li>
-                                <li class="list-inline-item me-4">
-                                    <a href="https://www.instagram.com/" target="_blank">
-                                        <img src="/imagens/icone-instagram.png" alt="Ícone Instagram">
-                                    </a>
-                                </li>
-                                <li class="list-inline-item me-4">
-                                    <a href="https://www.twitter.com/" target="_blank">
-                                        <img src="/imagens/icone-twitter.png" alt="Ícone Twitter">
-                                    </a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="https://www.youtube.com/" target="_blank">
-                                        <img src="/imagens/icone-youtube.png" alt="Ícone Youtube">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <!-- Redes Sociais-->
+        <div class="Farticle-FooterSocial">
+          <div
+            class="container d-flex justify-content-center align-items-center"
+          >
+            <div class="row">
+              <div class="col-12">
+                <h4>Siga-nos nas redes sociais</h4>
+                <ul class="list-inline justify-content-center">
+                  <li class="list-inline-item me-4">
+                    <a href="https://www.facebook.com/" target="_blank">
+                      <img
+                        src="/imagens/icone-facebook.png"
+                        alt="Ícone Facebook"
+                      />
+                    </a>
+                  </li>
+                  <li class="list-inline-item me-4">
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <img
+                        src="/imagens/icone-instagram.png"
+                        alt="Ícone Instagram"
+                      />
+                    </a>
+                  </li>
+                  <li class="list-inline-item me-4">
+                    <a href="https://www.twitter.com/" target="_blank">
+                      <img
+                        src="/imagens/icone-twitter.png"
+                        alt="Ícone Twitter"
+                      />
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="https://www.youtube.com/" target="_blank">
+                      <img
+                        src="/imagens/icone-youtube.png"
+                        alt="Ícone Youtube"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </div>        
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Rodapé-->
     <footer>
-        <!-- Informações da loja-->
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-12 d-flex flex-column align-items-center">
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><img src="/imagens/logo-ng-store.png" alt="NGStore"></li>
-                        <li class="Cinza mb-1">NG STORE VAREJO DE PRODUTOS DE INFORMATICA LTDA</li>
-                        <li class="Cinza mb-3">CNPJ: 02.933.972/0001-98 | Curitiba-PR</li>
-                    </ul>
-                    <ul class="list-unstyled">
-                        <li class="mb-1">ATENDIMENTO <br> De segunda a sexta das 8:30 às 12H / 13H às 18H</li>
-                        <li class="mb-1">0800 4002-8922</li>
-                        <li class="mb-3">atendimento@ngstore.com.br</li>
-                        <li class="Cinza">E-COMMERCE E ATENDIMENTO LOCAL</li>
-                    </ul>
-                </div>
-            </div>
+      <!-- Informações da loja-->
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-12 d-flex flex-column align-items-center">
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <img src="/imagens/logo-ng-store.png" alt="NGStore" />
+              </li>
+              <li class="Cinza mb-1">
+                NG STORE VAREJO DE PRODUTOS DE INFORMATICA LTDA
+              </li>
+              <li class="Cinza mb-3">CNPJ: 02.933.972/0001-98 | Curitiba-PR</li>
+            </ul>
+            <ul class="list-unstyled">
+              <li class="mb-1">
+                ATENDIMENTO <br />
+                De segunda a sexta das 8:30 às 12H / 13H às 18H
+              </li>
+              <li class="mb-1">0800 4002-8922</li>
+              <li class="mb-3">atendimento@ngstore.com.br</li>
+              <li class="Cinza">E-COMMERCE E ATENDIMENTO LOCAL</li>
+            </ul>
+          </div>
         </div>
-    </footer>    
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
