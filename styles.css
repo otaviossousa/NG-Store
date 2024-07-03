@@ -189,6 +189,7 @@ body main {
   }
   
   .products-dock-header {
+    background-color: #21224e;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -215,7 +216,7 @@ body main {
   }
   
   .btn__primary {
-    background-color: #007bff;
+    background-color: #97f509;
     color: rgb(255, 255, 255);
     border: none;
     padding: 8px 16px;
