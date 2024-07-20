@@ -183,6 +183,9 @@ body main {
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: #21224e;
+  color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
 }
   
 .container {
@@ -233,20 +236,19 @@ body main {
   text-overflow: ellipsis; /* Opcional: adiciona reticências ao final do texto que não cabe */
 }
 
-
-  
 .btn__primary {
-  background-color: #97f509;
+  background-color: #28a745;
   color: rgb(255, 255, 255);
   border: none;
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 0.9em;
+  font-size: 1em;
 }
   
 .btn__primary:hover {
   background-color: #0056b3;
+  transform: scale(1.05); /* Efeito de ampliação */
 }
   
 .products-dock-main {
@@ -323,7 +325,7 @@ body main {
 }
 
 .product-button:hover {
-  background-color: #218838;
+  background-color: #0056b3;
 }
   
 @media (max-width: 1024px) {
