@@ -178,11 +178,70 @@ body main {
 /* -----------------------------------------------------------< Login >----------------------------------------------------------------*/
 
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
+/* Estilo geral do banner */
+.banner {
+  position: relative; /* Para permitir o posicionamento dos elementos filhos */
+  background-image: url('/imagens/banners/dying-light.jpg'); /* Imagem de fundo */
+  background-size: contain; /* Faz a imagem cobrir toda a área do banner */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-position: center; /* Centraliza a imagem */
+  min-height: 245px; /* Define uma altura mínima */
+  display: flex; /* Usa Flexbox para o layout */
+  justify-content: flex-end; /* Centraliza os itens horizontalmente */
+  align-items: flex-end; /* Alinha os itens ao fundo do banner */
+  padding: 20px; /* Espaçamento interno do banner */
+  color: #fff; /* Cor do texto */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Conteúdo do banner */
+.banner-content {
+  display: flex; /* Usa Flexbox para o layout interno */
+  align-items: flex-end; /* Alinha os itens ao fundo do container */
+  justify-content: flex-end; /* Alinha os itens à direita */
+}
+
+/* Alinhamento dos elementos na mesma linha */
+.banner-info {
+  display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: flex-end; /* Garante que os itens dentro estejam alinhados à direita */
+}
+
+.product-info {
+  display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: space-between;
+  gap: 10px; /* Espaço entre os itens */
+}
+
+.product-button--text {
+  font-size: 16px; /* Tamanho da fonte do botão */
+  font-weight: bold; /* Texto em negrito */
+}
+
+.wishlist-btn {
+  display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
+  align-items: center; /* Alinha verticalmente ao centro */
+}
+
+/* Ícone de favoritos */
+.wishlist-btn img {
+  width: 30px; /* Largura do ícone */
+  height: 30px; /* Altura do ícone */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.wishlist-btn img:hover {
+  transform: scale(1.1); /* Aumenta o ícone quando hover */
+}
+
+
 .products-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #21224e;
   color: #ffffff;
   padding: 20px;
   margin-top: 20px;
@@ -199,6 +258,12 @@ body main {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
   
 .products-dock-header > div {
@@ -220,9 +285,15 @@ body main {
   margin-top: 10px;
 }
 
+.products-dock-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .product-card-wrapper {
   flex: 1;
-  min-width: 18%;
+  min-width: calc(20% - 20px); /* Ajuste a largura conforme necessário */
 }
 
 .product-card-wrapper a {
@@ -251,12 +322,6 @@ body main {
   transform: scale(1.05); /* Efeito de ampliação */
 }
   
-.products-dock-main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-  
 .product-card-wrapper {
   display: flex;
   flex-direction: column;
@@ -276,10 +341,16 @@ body main {
   
 .product-card--content {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
   
 .product-title {
-  font-size: 1.1em;
+  white-space: nowrap; /* Impede que o texto quebre para a próxima linha */
+  display: block;
+  overflow: hidden; /* Oculta o texto que excede o limite */
+  text-overflow: ellipsis; /* Adiciona '...' no final do texto cortado */
+  font-size: 1em;
   font-weight: bold;
   color: #fffdfd;
 }
@@ -304,9 +375,8 @@ body main {
   color: #fff;
   padding: 2px 6px;
   border-radius: 3px;
-  font-size: 14px; /* Ajuste o tamanho da fonte do badge */
+  font-size: 14px;
   font-weight: bold;
-  margin-right: 10px;
 }
 
 .product-discount__price {
@@ -322,6 +392,7 @@ body main {
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .product-button:hover {
