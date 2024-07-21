@@ -1,3 +1,13 @@
+/* Configuração inicial do viewport */
+html {
+  font-size: 100%; /* 1rem = 16px */
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 /* --------------------------------------------------------------< Header >------------------------------------------------------------- */
 
 header {
@@ -182,7 +192,7 @@ body main {
 .banner {
   position: relative; /* Para permitir o posicionamento dos elementos filhos */
   background-image: url('/imagens/banners/dying-light.jpg'); /* Imagem de fundo */
-  background-size: contain; /* Faz a imagem cobrir toda a área do banner */
+  background-size: cover; /* Redimensiona a imagem para cobrir o container */
   background-repeat: no-repeat; /* Evita que a imagem se repita */
   background-position: center; /* Centraliza a imagem */
   min-height: 245px; /* Define uma altura mínima */
@@ -192,6 +202,8 @@ body main {
   padding: 20px; /* Espaçamento interno do banner */
   color: #fff; /* Cor do texto */
   border-radius: 8px; /* Bordas arredondadas */
+  margin: 50px auto; /* Margens para espaçamento */
+  max-width: calc(75% - 40px); /* Limita a largura máxima do banner */
 }
 
 /* Conteúdo do banner */
@@ -205,7 +217,8 @@ body main {
 .banner-info {
   display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
   align-items: center; /* Alinha verticalmente ao centro */
-  justify-content: flex-end; /* Garante que os itens dentro estejam alinhados à direita */
+  justify-content: center; /* Garante que os itens dentro estejam centralizados */
+  width: 100%; /* Garante que o container ocupe toda a largura disponível */
 }
 
 .product-info {
@@ -216,7 +229,7 @@ body main {
 }
 
 .product-button--text {
-  font-size: 16px; /* Tamanho da fonte do botão */
+  font-size: 1rem; /* Tamanho da fonte do botão */
   font-weight: bold; /* Texto em negrito */
 }
 
@@ -227,8 +240,8 @@ body main {
 
 /* Ícone de favoritos */
 .wishlist-btn img {
-  width: 30px; /* Largura do ícone */
-  height: 30px; /* Altura do ícone */
+  width: 2rem; /* Largura do ícone */
+  height: 2rem; /* Altura do ícone */
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
   transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
 }
@@ -237,6 +250,29 @@ body main {
   transform: scale(1.1); /* Aumenta o ícone quando hover */
 }
 
+.product-discount__badge {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.product-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+  background-color: #0056b3;
+}
 
 .products-cards {
   display: flex;
@@ -274,13 +310,13 @@ body main {
 }
   
 .products-dock-title {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
 }
   
 .products-dock-subtitle {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: #ffffff;
   margin-top: 10px;
 }
@@ -314,7 +350,7 @@ body main {
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 1em;
+  font-size: 1rem;
 }
   
 .btn__primary:hover {
@@ -350,7 +386,7 @@ body main {
   display: block;
   overflow: hidden; /* Oculta o texto que excede o limite */
   text-overflow: ellipsis; /* Adiciona '...' no final do texto cortado */
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: bold;
   color: #fffdfd;
 }
@@ -367,50 +403,28 @@ body main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
-}
-
-.product-discount__badge {
-  background-color: #ff0000;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 0.875rem; /* Ajuste o tamanho da fonte conforme necessário */
 }
 
 .product-discount__price {
   color: #ffffff;
-  font-size: 16px; /* Ajuste o tamanho da fonte do preço */
+  font-size: 1rem; /* Ajuste o tamanho da fonte do preço */
   font-weight: bold;
 }
 
-.product-button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.product-button:hover {
-  background-color: #0056b3;
-}
   
 @media (max-width: 1024px) {
   .product-card-wrapper {
     width: calc(33.333% - 20px); /* 3 cards por linha em telas médias */
   }
 }
-  
+
 @media (max-width: 768px) {
   .product-card-wrapper {
     width: calc(50% - 20px); /* 2 cards por linha em telas pequenas */
   }
 }
-  
+
 @media (max-width: 480px) {
   .product-card-wrapper {
     width: 100%; /* 1 card por linha em telas muito pequenas */
