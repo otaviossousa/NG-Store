@@ -389,15 +389,30 @@ body main {
 /* -----------------------------------------------------------< Footer >------------------------------------------------------------- */
 
 .Farticle-FooterSubMenu {
+  width: 100%;
   background-color: #212121;
   color: #ffffff;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 0;
   flex-wrap: wrap;
 }
 
+.Farticle-FooterSubMenu .grid-container {
+  max-width: 1200px; /* Ajuste para ser consistente com outros containers */
+  width: 100%;
+  padding: 0 20px; /* Adiciona padding lateral se necessário */
+}
+
+.Farticle-FooterSubMenu .row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .Farticle-FooterSubMenu ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -418,17 +433,16 @@ body main {
   white-space: nowrap;
 }
 
+.Farticle-FooterSubMenu ul li a:hover {
+  text-decoration: underline;
+}
+
 .footer h4 {
   color: #00a000;
   text-align: left;
+  margin-bottom: 10px;
 }
 
-.custom-gx > .col-xs-12, .custom-gx > [class*="col-"] {
-  padding-top: 20px;
-  padding-right: 85px;
-  padding-left: 85px;
-  text-align: left;
-}
 
 .Farticle-FooterSocial {
   background-color: #262626;
@@ -467,20 +481,18 @@ footer .container {
   align-items: center;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
-  .custom-gx > .col-xs-12, .custom-gx > [class*="col-"] {
-    padding-right: 15px;
-    padding-left: 15px;
+  .Farticle-FooterSubMenu .grid-container {
+    padding: 0 15px;
   }
 
-  .Farticle-FooterSubMenu {
+  .Farticle-FooterSubMenu .row {
     flex-direction: column;
     align-items: center;
   }
 
-  .Farticle-FooterSocial ul {
-    flex-direction: column;
-    align-items: center;
+  .Farticle-FooterSubMenu .col-xs-12 {
+    width: 100%;
+    padding: 10px 0;
   }
 }
