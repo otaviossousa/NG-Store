@@ -188,37 +188,41 @@ body main {
 /* -----------------------------------------------------------< Login >----------------------------------------------------------------*/
 
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
-/* Estilo geral do banner */
-.banner {
-  position: relative; /* Para permitir o posicionamento dos elementos filhos */
-  background-image: url('/imagens/banners/dying-light.jpg'); /* Imagem de fundo */
-  background-size: cover; /* Redimensiona a imagem para cobrir o container */
-  background-repeat: no-repeat; /* Evita que a imagem se repita */
-  background-position: center; /* Centraliza a imagem */
-  min-height: 245px; /* Define uma altura mínima */
-  display: flex; /* Usa Flexbox para o layout */
-  justify-content: flex-end; /* Centraliza os itens horizontalmente */
-  align-items: flex-end; /* Alinha os itens ao fundo do banner */
-  padding: 20px; /* Espaçamento interno do banner */
-  color: #fff; /* Cor do texto */
-  border-radius: 8px; /* Bordas arredondadas */
-  margin: 50px auto; /* Margens para espaçamento */
-  max-width: calc(75% - 40px); /* Limita a largura máxima do banner */
+.home-section--banner {
+  position: relative;
+  margin-top: 50px; /* Espaço acima do banner */
+  margin-bottom: 50px; /* Espaço abaixo do banner */
 }
 
-/* Conteúdo do banner */
+.grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  position: relative;
+}
+
+.home-section--banner-image {
+  display: block;
+  position: relative;
+}
+
+.home-section--banner-image img {
+  width: 100%;
+  height: auto;
+}
+
 .banner-content {
-  display: flex; /* Usa Flexbox para o layout interno */
-  align-items: flex-end; /* Alinha os itens ao fundo do container */
-  justify-content: flex-end; /* Alinha os itens à direita */
+  position: absolute;
+  bottom: 20px; /* Ajuste conforme necessário */
+  right: 20px;  /* Ajuste conforme necessário */
+  z-index: 10;
 }
 
-/* Alinhamento dos elementos na mesma linha */
 .banner-info {
-  display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
-  align-items: center; /* Alinha verticalmente ao centro */
-  justify-content: center; /* Garante que os itens dentro estejam centralizados */
-  width: 100%; /* Garante que o container ocupe toda a largura disponível */
+  display: flex;
+  align-items: center;
 }
 
 .product-info {
