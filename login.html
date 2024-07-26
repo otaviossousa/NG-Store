@@ -28,56 +28,43 @@
           <!-- Logo da loja-->
           <div class="header-site-logo">
             <a href="/index.html">
-              <img
-                id="logo-ng-store"
-                src="/images/logo/logo-ng-store.png"
-                alt="Logo da Loja"
-              />
+              <img id="logo-ng-store" src="images/logo/logo-ng-store.png" alt="Logo da Loja"/>
             </a>
           </div>
-
+      
           <!-- Barra de Pesquisa-->
           <div class="container">
             <!-- Barra de Pesquisa-->
             <div class="search-bar">
               <form class="d-flex">
-                <input
-                  class="form-control me-1"
-                  type="search"
-                  placeholder="Digite o que você procura..."
-                  aria-label="Pesquisar"
-                />
-                <img
-                  src="/images/icones/icone-pesquisa.png"
-                  alt="Ícone Pesquisa"
-                  class="search-icon"
-                />
+                <input class="form-control me-1" type="search" placeholder="Digite o que você procura..." aria-label="Pesquisar" />
+                <img src="images/icones/icone-pesquisa.png" alt="Ícone Pesquisa" class="search-icon" />
               </form>
             </div>
           </div>
-
+      
           <!-- Ícones (Login, Favoritos, Carrinho) -->
           <div class="icons">
             <div class="login-icon">
-              <a href="/login.html">
-                <img src="/images/icones/icone-login.png" alt="Ícone Login" />
+              <a href="login.html">
+                <img src="images/icones/icone-login.png" alt="Ícone Login" />
               </a>
             </div>
-
+      
             <div class="favorites-icon">
               <a href="/favoritos.html">
-                <img src="/images/icones/icone-favoritos.png" alt="Ícone Favoritos" />
+                <img src="images/icones/icone-favoritos.png" alt="Ícone Favoritos" />
               </a>
             </div>
-
+      
             <div class="cart-icon">
               <a href="/carrinho.html">
-                <img src="/images/icones/icone-carrinho.png" alt="Ícone Carrinho" />
+                <img src="images/icones/icone-carrinho.png" alt="Ícone Carrinho" />
               </a>
             </div>
           </div>
         </div>
-
+      
         <!-- Segundo Container-->
         <div class="grid-container second-container">
           <!-- Menu de Departamentos-->
@@ -89,7 +76,7 @@
               data-bs-toggle="offcanvas"
               data-bs-target="#offcanvasWithBothOptions"
               aria-controls="offcanvasWithBothOptions">
-              <img src="/images/icones/icone-menu.png" alt="Ícone Menu" />
+              <img src="images/icones/icone-menu.png" alt="Ícone Menu" />
             </button>
             <span>DEPARTAMENTOS</span>
             <div
@@ -112,13 +99,12 @@
               </div>
               <div class="offcanvas-body">
                 <p>
-                  Try scrolling the rest of the page to see this option in
-                  action.
+                  Try scrolling the rest of the page to see this option in action.
                 </p>
               </div>
             </div>
           </div>
-
+      
           <!-- Menu de Categorias-->
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -133,7 +119,7 @@
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
-
+      
               <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
@@ -169,14 +155,14 @@
                       <form name="flogin" id="loginForm" action="/login" method="POST" onsubmit="return handleLogin(event)">
                           <div class="mb-3">
                               <label for="email" class="form-label">
-                                  <img src="/images/icones/icone-usuario.png" alt="icone-usuario" class="form-icon"> 
+                                  <img src="images/icones/icone-usuario.png" alt="icone-usuario" class="form-icon"> 
                                   Usuário
                               </label>
                               <input type="text" class="form-control" id="usuario" name="usuario" placeholder="E-mail, CPF ou CNPJ" required>
                           </div>
                           <div class="mb-3">
                               <label for="password" class="form-label">
-                                  <img src="/images/icones/icone-cadeado.png" alt="icone-cadeado" class="form-icon">
+                                  <img src="images/icones/icone-cadeado.png" alt="icone-cadeado" class="form-icon">
                                   Senha
                               </label>
                               <input type="password" class="form-control" id="senha" name="senha" placeholder="Insira sua senha" required>
@@ -184,7 +170,7 @@
                           <div class="d-grid gap-2">
                               <button type="submit" class="btn btn-custom">
                                   Entrar
-                                  <img src="/images/icones/icone-entrar.png" alt="icone-entrar">
+                                  <img src="images/icones/icone-entrar.png" alt="icone-entrar">
                               </button>
                           </div>
                           <p class="mt-3 text-center">
@@ -204,38 +190,78 @@
       <div class="Fsection">
         <!-- Sub-Menu-->
         <div class="Farticle-FooterSubMenu">
-          <div class="grid-container">
-            <div class="row">
+          <div
+            class="grid-container d-flex justify-content-center align-items-center"
+          >
+            <div class="row gx-5 custom-gx">
               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                 <h4>Institucional</h4>
                 <ul>
-                  <li><a href="/quemsomos.html">Quem somos</a></li>
-                  <li><a href="/termosecondicoes.html">Termos e Condições</a></li>
-                  <li><a href="/segurancaeprivacidade.html">Segurança e Privacidade</a></li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/quemsomos.html">Quem somos</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/termosecondicoes.html">Termos e Condições</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/segurancaeprivacidade.html"
+                      >Segurança e Privacidade</a
+                    >
+                  </li>
                 </ul>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                 <h4>Dúvidas</h4>
                 <ul>
-                  <li><a href="/como-comprar.html">Como comprar</a></li>
-                  <li><a href="/prazos-e-entregas.html">Prazos e entregas</a></li>
-                  <li><a href="/formas-de-pagamento.html">Formas de Pagamento</a></li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/como-comprar.html">Como comprar</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/prazos-e-entregas.html">Prazos e entregas</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/formas-de-pagamento.html">Formas de Pagamento</a>
+                  </li>
                 </ul>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                 <h4>Cliente</h4>
                 <ul>
-                  <li><a href="/login.html">Minha conta</a></li>
-                  <li><a href="/cadastro.html">Meus pedidos</a></li>
-                  <li><a href="/carrinho.html">Meus tickets</a></li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/login.html">Minha conta</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/cadastro.html">Meus pedidos</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="/carrinho.html">Meus tickets</a>
+                  </li>
                 </ul>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mb-4">
                 <h4>Contato</h4>
                 <ul>
-                  <li><a href="atendimento.html">atendimento@ngstore.com.br</a></li>
-                  <li><a href="#">0800 4002-8922</a></li>
-                  <li><a href="fale-conosco.html">Fale conosco</a></li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="atendimento.html">atendimento@ngstore.com.br</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="#">0800 4002-8922</a>
+                  </li>
+                  <li>
+                    <i class="glyphicon glyphicon-chevron-right hidden-xs"></i>
+                    <a href="fale-conosco.html">Fale conosco</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -252,7 +278,7 @@
                   <li class="list-inline-item me-4">
                     <a href="https://www.facebook.com/" target="_blank">
                       <img
-                        src="/images/icones/icone-facebook.png"
+                        src="images/icones/icone-facebook.png"
                         alt="Ícone Facebook"
                       />
                     </a>
@@ -260,7 +286,7 @@
                   <li class="list-inline-item me-4">
                     <a href="https://www.instagram.com/" target="_blank">
                       <img
-                        src="/images/icones/icone-instagram.png"
+                        src="images/icones/icone-instagram.png"
                         alt="Ícone Instagram"
                       />
                     </a>
@@ -268,7 +294,7 @@
                   <li class="list-inline-item me-4">
                     <a href="https://www.twitter.com/" target="_blank">
                       <img
-                        src="/images/icones/icone-twitter.png"
+                        src="images/icones/icone-twitter.png"
                         alt="Ícone Twitter"
                       />
                     </a>
@@ -276,7 +302,7 @@
                   <li class="list-inline-item">
                     <a href="https://www.youtube.com/" target="_blank">
                       <img
-                        src="/images/icones/icone-youtube.png"
+                        src="images/icones/icone-youtube.png"
                         alt="Ícone Youtube"
                       />
                     </a>
@@ -296,7 +322,7 @@
           <div class="col-12 d-flex flex-column align-items-center">
             <ul class="list-unstyled">
               <li class="mb-3">
-                <img src="/images/logo/logo-ng-store.png" alt="NGStore" />
+                <img src="images/logo/logo-ng-store.png" alt="NGStore" />
               </li>
               <li class="Cinza mb-1">
                 NG STORE VAREJO DE PRODUTOS DE INFORMATICA LTDA
