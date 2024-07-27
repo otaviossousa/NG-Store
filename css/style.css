@@ -189,20 +189,11 @@ body main {
 /* -----------------------------------------------------------< Login >----------------------------------------------------------------*/
 
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
+/* Estilização do Banner */
 .home-section--banner {
   position: relative;
   margin-top: 50px; /* Espaço acima do banner */
   margin-bottom: 50px; /* Espaço abaixo do banner */
-}
-
-.grid-container {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.grid {
-  position: relative;
 }
 
 .home-section--banner-image {
@@ -227,6 +218,7 @@ body main {
   align-items: center;
 }
 
+/* Estilização dos Produtos */
 .product-info {
   display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
   align-items: center; /* Alinha verticalmente ao centro */
@@ -244,7 +236,7 @@ body main {
   align-items: center; /* Alinha verticalmente ao centro */
 }
 
-/* Ícone de favoritos */
+/* Ícone de Favoritos */
 .wishlist-btn img {
   width: 2rem; /* Largura do ícone */
   height: 2rem; /* Altura do ícone */
@@ -280,9 +272,11 @@ body main {
   background-color: #0056b3;
 }
 
+/* Cards de Produtos */
 .products-cards {
   position: relative;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   color: #ffffff;
@@ -290,54 +284,19 @@ body main {
   margin-top: 20px;
   gap: 20px;
 }
-  
-.container {
-  max-width: 1200px;
-  margin: 0px 235.5px;
-}
-  
-.products-dock-header {
-  background-color: #21224e;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-  
-.products-dock-header > div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-  
-.products-dock-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-  
-.products-dock-subtitle {
-  font-size: 1.1rem;
-  color: #ffffff;
-  margin-top: 10px;
-}
-
-.products-dock-main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
 .product-card-wrapper {
-  flex: 1;
-  min-width: calc(15% - 20px); 
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #262626;
+  text-decoration: none;
+  color: inherit;
+  flex: 1 1 calc(20% - 20px); /* Flex-grow, flex-shrink e flex-basis para melhor controle */
+  min-width: 200px; /* Define uma largura mínima para o card */
+  max-width: calc(25% - 20px); /* Ajuste a largura conforme necessário */
 }
 
 .product-card-wrapper a {
@@ -360,35 +319,23 @@ body main {
   border-radius: 4px;
   font-size: 1rem;
 }
-  
+
 .btn__primary:hover {
   background-color: #0056b3;
   transform: scale(1.05); /* Efeito de ampliação */
-}
-  
-.product-card-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  background-color: #262626;
-  text-decoration: none;
-  color: inherit;
-  width: calc(25% - 20px); /* Ajuste a largura conforme necessário */
 }
 
 .product-img img {
   width: 100%;
   height: auto;
 }
-  
+
 .product-card--content {
   padding: 10px;
   display: flex;
   flex-direction: column;
 }
-  
+
 .product-title {
   white-space: nowrap; /* Impede que o texto quebre para a próxima linha */
   display: block;
@@ -398,15 +345,7 @@ body main {
   font-weight: bold;
   color: #fffdfd;
 }
-  
-.product-card--footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-top: 1px solid #eee;
-}
-  
+
 .product-discount {
   display: flex;
   align-items: center;
@@ -420,6 +359,94 @@ body main {
   font-weight: bold;
 }
 
+/* Contêineres e Grade */
+.grid-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px 235.5px;
+}
+
+/* Cabeçalho da Dock de Produtos */
+.products-dock-header {
+  background-color: #21224e;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.products-dock-header > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-dock-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.products-dock-subtitle {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.products-dock-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Regras de Mídia para Responsividade */
+@media (max-width: 1024px) {
+  .product-card-wrapper {
+    max-width: calc(33.333% - 20px); /* Três colunas */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card-wrapper {
+    max-width: calc(50% - 20px); /* Duas colunas */
+  }
+
+  .products-dock-header > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .products-dock-header > div > h2,
+  .products-dock-header > div > a {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card-wrapper {
+    max-width: 100%; /* Uma coluna */
+  }
+
+  .product-title {
+    font-size: 0.9rem;
+  }
+
+  .product-button--text {
+    font-size: 0.7rem;
+  }
+}
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
 
 /* -----------------------------------------------------------< Footer >------------------------------------------------------------- */
