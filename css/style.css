@@ -6,6 +6,8 @@ html {
 
 *, *::before, *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /* --------------------------------------------------------------< Header >------------------------------------------------------------- */
@@ -33,23 +35,24 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .search-bar {
   flex-grow: 1;
   margin: 0 20px;
-  max-width: 4000px;
+  position: relative;
 }
 
 .search-bar form {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .search-bar input {
   flex-grow: 1;
-  margin-right: 10px;
-  min-width: 200px;
+  padding-right: 40px; 
 }
 
 .icons {
@@ -62,15 +65,6 @@ header {
   height: auto;
 }
 
-.search-bar {
-  position: relative;
-}
-
-.search-bar input {
-  width: 100%;
-  padding-right: 40px;
-}
-
 .search-icon {
   position: absolute;
   right: 10px;
@@ -80,13 +74,19 @@ header {
 }
 
 .navbar-nav .nav-link {
-  margin-right: 50px;
+  margin-right: 60px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .header-main-menu-button {
   display: flex;
   align-items: center;
-  margin-right: 20px; /* Adicionado para espaçamento */
+  margin-right: 20px;
 }
 
 .second-container {
@@ -96,6 +96,42 @@ header {
   width: 100%;
 }
 
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header-site-logo {
+    flex: 0 1 auto;
+  }
+
+  .search-bar {
+    flex: 1;
+    max-width: 100%; 
+    margin: 0 10px;
+  }
+
+  .icons {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Segundo container*/
+
+  .second-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Garante que os itens não quebrem para uma nova linha */
+    width: 100%;
+  }
+}
 /* ------------------------------------------------------------< Main >--------------------------------------------------------------- */
 
 /* -----------------------------------------------------------< Login >----------------------------------------------------------------*/
