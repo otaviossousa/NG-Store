@@ -294,8 +294,8 @@ body main {
   background-color: #262626;
   text-decoration: none;
   color: inherit;
-  flex: 1 1 calc(20% - 20px); /* Flex-grow, flex-shrink e flex-basis para melhor controle */
-  max-width: calc(25% - 10px); /* Ajuste a largura conforme necessário */
+  flex: 1 1 calc(10% - 15px); /* Flex-grow, flex-shrink e flex-basis para melhor controle */
+  max-width: calc(20% - 10px); /* Ajuste a largura conforme necessário */
 }
 
 .product-card-wrapper a {
@@ -410,24 +410,17 @@ body main {
 }
 
 /* Regras de Mídia para Responsividade */
-@media (max-width: 1200px) {
-  .product-card-wrapper {
-    flex: 1 1 calc(20% - 10px); /* Mantém 5 cards na linha */
-    max-width: calc(20% - 10px); /* Ajuste a largura conforme necessário */
-  }
-}
-
 @media (max-width: 1024px) {
   .product-card-wrapper {
-    flex: 1 1 calc(33.333% - 10px); /* Três colunas */
-    max-width: calc(33.333% - 10px); /* Ajuste a largura conforme necessário */
+    flex: 1 1 calc(25% - 10px); /* Quatro colunas */
+    max-width: calc(25% - 10px); /* Ajuste a largura conforme necessário */
   }
 }
 
 @media (max-width: 768px) {
   .product-card-wrapper {
-    flex: 1 1 calc(50% - 10px); /* Duas colunas */
-    max-width: calc(50% - 10px); /* Ajuste a largura conforme necessário */
+    flex: 1 1 calc(33.333% - 10px); /* Três colunas */
+    max-width: calc(33.333% - 10px); /* Ajuste a largura conforme necessário */
   }
 
   .products-dock-header > div {
@@ -444,16 +437,34 @@ body main {
 
 @media (max-width: 480px) {
   .product-card-wrapper {
-    flex: 1 1 100%; /* Uma coluna */
-    max-width: 100%; /* Ajuste a largura conforme necessário */
+    flex: 1 1 calc(20% - 5px); /* Cinco colunas */
+    max-width: calc(20% - 5px); /* Ajuste a largura conforme necessário */
+    margin: 0; /* Remove margens */
+    padding: 5px; /* Reduz padding */
   }
 
   .product-title {
-    font-size: 0.9rem;
+    font-size: 0.7rem; /* Reduz tamanho da fonte */
   }
 
   .product-button--text {
-    font-size: 0.7rem;
+    font-size: 0.6rem; /* Reduz tamanho da fonte */
+  }
+
+  .product-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .products-dock-header > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .products-dock-header > div > h2,
+  .products-dock-header > div > a {
+    width: 100%;
+    text-align: left;
   }
 }
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
