@@ -431,6 +431,11 @@ body main {
 
 /* Ajustes de responsividade para os cards de produto */
 @media (max-width: 768px) {
+  .products-cards {
+    flex-direction: column;
+    padding: 10px;
+  }
+
   .product-card-wrapper {
     flex: 0 1  auto; 
     max-width: auto;
@@ -442,7 +447,7 @@ body main {
   }
 
   .product-title {
-    font-size: 0.9rem; /* Ajuste o tamanho da fonte para telas menores */
+    font-size: 0.9rem; 
   }
 
   .product-info {
@@ -456,13 +461,57 @@ body main {
     text-align: center;
   }
 
+  .product-discount {
+    flex-direction: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .wishlist-btn {
+    display: flex;
+    align-items: center;
+  }
+
   .wishlist-btn img {
     width: 1.5rem; 
     height: 1.5rem;
   }
 
+  .product-button--text {
+    font-size: 0.7rem;
+  }
+
+  .product-button {
+    padding: 0.2rem 0.4rem;
+  }
+
+  .product-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-discount__price {
+    font-size: 0.8rem;
+  }
+
   .product-discount__badge {
-    font-size: auto;
+    font-size: 0.7rem;
+  }
+
+  .single-line-name {
+    font-size: 0.9rem;
+  }
+
+  .btn__primary {
+    font-size: 0.8rem;
+  }
+
+  .products-dock-title {
+    font-size: 1.2rem;
+  }
+
+  .products-dock-subtitle {
+    font-size: 0.9rem;
   }
 }
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
