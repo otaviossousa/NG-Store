@@ -295,8 +295,7 @@ body main {
   text-decoration: none;
   color: inherit;
   flex: 1 1 calc(20% - 20px); /* Flex-grow, flex-shrink e flex-basis para melhor controle */
-  min-width: 200px; /* Define uma largura mínima para o card */
-  max-width: calc(25% - 20px); /* Ajuste a largura conforme necessário */
+  max-width: calc(25% - 10px); /* Ajuste a largura conforme necessário */
 }
 
 .product-card-wrapper a {
@@ -411,15 +410,24 @@ body main {
 }
 
 /* Regras de Mídia para Responsividade */
+@media (max-width: 1200px) {
+  .product-card-wrapper {
+    flex: 1 1 calc(20% - 10px); /* Mantém 5 cards na linha */
+    max-width: calc(20% - 10px); /* Ajuste a largura conforme necessário */
+  }
+}
+
 @media (max-width: 1024px) {
   .product-card-wrapper {
-    max-width: calc(33.333% - 20px); /* Três colunas */
+    flex: 1 1 calc(33.333% - 10px); /* Três colunas */
+    max-width: calc(33.333% - 10px); /* Ajuste a largura conforme necessário */
   }
 }
 
 @media (max-width: 768px) {
   .product-card-wrapper {
-    max-width: calc(50% - 20px); /* Duas colunas */
+    flex: 1 1 calc(50% - 10px); /* Duas colunas */
+    max-width: calc(50% - 10px); /* Ajuste a largura conforme necessário */
   }
 
   .products-dock-header > div {
@@ -436,7 +444,8 @@ body main {
 
 @media (max-width: 480px) {
   .product-card-wrapper {
-    max-width: 100%; /* Uma coluna */
+    flex: 1 1 100%; /* Uma coluna */
+    max-width: 100%; /* Ajuste a largura conforme necessário */
   }
 
   .product-title {
