@@ -227,8 +227,8 @@ body main {
 }
 
 .product-button--text {
-  font-size: 0.8rem; /* Tamanho da fonte do botão */
-  font-weight: bold; /* Texto em negrito */
+  font-size: 0.890rem; 
+  font-weight: bold; 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -415,15 +415,14 @@ body main {
 /* Responsividade para a header dos jogos */
 @media (max-width: 768px) {
   .products-dock-header div {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
-
   .btn__primary.btn__small {
-    width: 30%;
+    width: auto;
     text-align: center;
-    margin-top: 10px;
   }
 
   .products-dock-subtitle {
@@ -434,26 +433,32 @@ body main {
 
 /* Ajustes de responsividade para os cards de produto */
 @media (max-width: 768px) {
-  
-
   .products-cards {
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
+    margin: 0;
+  }
+
+  .grid-container {
+    margin: 0; /* Remove margens da grid-container */
+    padding: 0 10px; /* Adiciona padding horizontal para manter um pouco de espaço */
+    width: 100%; /* Garante que a largura seja 100% */
   }
 
   .product-card-wrapper {
-    flex: 0 1  auto; 
-    max-width: auto;
-    flex-direction: column;
+    flex: 0 1 auto;
+    max-width: 100%;
+    margin: 0;
   }
 
   .product-title {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
   }
 
   .product-info {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
   }
 
@@ -463,7 +468,7 @@ body main {
   }
 
   .product-discount {
-    flex-direction: flex-start;
+    display: flex;
     align-items: center;
     gap: 10px;
   }
@@ -474,7 +479,7 @@ body main {
   }
 
   .wishlist-btn img {
-    width: 1.5rem; 
+    width: 1.5rem;
     height: 1.5rem;
   }
 
@@ -487,6 +492,10 @@ body main {
 
   .product-button {
     padding: 0.2rem 0.4rem;
+  }
+
+  .product-img {
+    margin-top: 0; /* Remove o espaçamento no topo */
   }
 
   .product-img img {
@@ -504,6 +513,9 @@ body main {
 
   .single-line-name {
     font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden; /* Opcional: esconde o texto que não cabe na linha */
+    text-overflow: ellipsis; /* Opcional: adiciona reticências ao final do texto que não cabe */
   }
 
   .btn__primary {
