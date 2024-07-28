@@ -413,13 +413,13 @@ body main {
 /* Regras de Mídia para Responsividade */
 @media (max-width: 1024px) {
   .product-card-wrapper {
-    max-width: calc(25% - 20px); /* Quatro colunas */
+    max-width: calc(33.333% - 20px); /* Três colunas */
   }
 }
 
 @media (max-width: 768px) {
   .product-card-wrapper {
-    max-width: calc(25% - 20px); /* Quatro colunas */
+    max-width: calc(50% - 20px); /* Duas colunas */
   }
 
   .products-dock-header > div {
@@ -436,7 +436,7 @@ body main {
 
 @media (max-width: 480px) {
   .product-card-wrapper {
-    max-width: calc(25% - 20px); /* Quatro colunas */
+    max-width: 100%; /* Uma coluna */
   }
 
   .product-title {
@@ -458,24 +458,20 @@ body main {
   display: flex;
   justify-content: center;
   padding: 10px 0;
+  flex-wrap: wrap;
 }
 
 .Farticle-FooterSubMenu .grid-container {
-  max-width: 1200px;
+  max-width: 1200px; /* Ajuste para ser consistente com outros containers */
   width: 100%;
-  padding: 0 20px;
+  padding: 0 20px; /* Adiciona padding lateral se necessário */
 }
 
 .Farticle-FooterSubMenu .row {
-  display: flex;
-  flex-wrap: nowrap; /* Garante que as colunas fiquem lado a lado */
-  justify-content: space-between;
   width: 100%;
-}
-
-.Farticle-FooterSubMenu .col {
-  flex: 1 1 auto;
-  min-width: 200px; /* Largura mínima para manter as colunas lado a lado */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .Farticle-FooterSubMenu ul {
@@ -487,12 +483,17 @@ body main {
 .Farticle-FooterSubMenu ul li {
   display: flex;
   align-items: center;
+  list-style-type: none;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
   margin-bottom: 5px;
 }
 
 .Farticle-FooterSubMenu ul li a {
   color: #ffffff;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .Farticle-FooterSubMenu ul li a:hover {
@@ -501,8 +502,10 @@ body main {
 
 .footer h4 {
   color: #00a000;
+  text-align: left;
   margin-bottom: 10px;
 }
+
 
 .Farticle-FooterSocial {
   background-color: #262626;
@@ -542,12 +545,17 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-  .Farticle-FooterSubMenu .row {
-    flex-wrap: nowrap; /* Garante que as colunas fiquem lado a lado */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+  .Farticle-FooterSubMenu .grid-container {
+    padding: 0 15px;
   }
 
-  .Farticle-FooterSubMenu .col {
-    flex: 0 0 auto; /* Garante que as colunas mantenham seu tamanho */
+  .Farticle-FooterSubMenu .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Farticle-FooterSubMenu .col-xs-12 {
+    width: 100%;
+    padding: 10px 0;
   }
 }
