@@ -413,13 +413,13 @@ body main {
 /* Regras de Mídia para Responsividade */
 @media (max-width: 1024px) {
   .product-card-wrapper {
-    max-width: calc(33.333% - 20px); /* Três colunas */
+    max-width: calc(25% - 20px); /* Quatro colunas */
   }
 }
 
 @media (max-width: 768px) {
   .product-card-wrapper {
-    max-width: calc(50% - 20px); /* Duas colunas */
+    max-width: calc(25% - 20px); /* Quatro colunas */
   }
 
   .products-dock-header > div {
@@ -436,7 +436,7 @@ body main {
 
 @media (max-width: 480px) {
   .product-card-wrapper {
-    max-width: 100%; /* Uma coluna */
+    max-width: calc(25% - 20px); /* Quatro colunas */
   }
 
   .product-title {
