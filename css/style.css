@@ -229,6 +229,9 @@ body main {
 .product-button--text {
   font-size: 0.8rem; /* Tamanho da fonte do botão */
   font-weight: bold; /* Texto em negrito */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .wishlist-btn {
@@ -431,6 +434,8 @@ body main {
 
 /* Ajustes de responsividade para os cards de produto */
 @media (max-width: 768px) {
+  
+
   .products-cards {
     flex-direction: column;
     padding: 10px;
@@ -439,11 +444,7 @@ body main {
   .product-card-wrapper {
     flex: 0 1  auto; 
     max-width: auto;
-    flex-direction: row;
-  }
-
-  .product-card--content {
-    padding: 10px;
+    flex-direction: column;
   }
 
   .product-title {
@@ -479,6 +480,9 @@ body main {
 
   .product-button--text {
     font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .product-button {
