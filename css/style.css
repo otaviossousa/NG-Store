@@ -192,8 +192,8 @@ body main {
 /* Estilização do Banner */
 .home-section--banner {
   position: relative;
-  margin-top: 50px; /* Espaço acima do banner */
-  margin-bottom: 50px; /* Espaço abaixo do banner */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .home-section--banner-image {
@@ -208,8 +208,8 @@ body main {
 
 .banner-content {
   position: absolute;
-  bottom: 20px; /* Ajuste conforme necessário */
-  right: 20px;  /* Ajuste conforme necessário */
+  bottom: 20px;
+  right: 20px;
   z-index: 10;
 }
 
@@ -218,37 +218,63 @@ body main {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .banner-content {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .banner-info {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .product-info {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .product-button--text {
+    font-size: 0.750rem;
+  }
+
+  .wishlist-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /* Estilização dos Produtos */
 .product-info {
-  display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
-  align-items: center; /* Alinha verticalmente ao centro */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  gap: 5px; /* Espaço entre os itens */
+  gap: 5px;
 }
 
 .product-button--text {
-  font-size: 0.890rem; 
-  font-weight: bold; 
+  font-size: 0.890rem;
+  font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .wishlist-btn {
-  display: flex; /* Usa Flexbox para alinhar itens na mesma linha */
-  align-items: center; /* Alinha verticalmente ao centro */
+  display: flex;
+  align-items: center;
 }
 
-/* Ícone de Favoritos */
 .wishlist-btn img {
-  width: 2rem; /* Largura do ícone */
-  height: 2rem; /* Altura do ícone */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .wishlist-btn img:hover {
-  transform: scale(1.1); /* Aumenta o ícone quando hover */
+  transform: scale(1.1);
 }
 
 .product-discount__badge {
@@ -277,28 +303,19 @@ body main {
 
 /* Cards de Produtos */
 .products-cards {
-  position: relative;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  color: #ffffff;
-  padding: 20px;
-  margin-top: 20px;
-  gap: 20px;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
 }
 
 .product-card-wrapper {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
+  flex: 1 0 18.5%;
+  max-width: 18.75%;
   border-radius: 5px;
   overflow: hidden;
   background-color: #262626;
-  text-decoration: none;
-  color: inherit;
-  flex: 1 1 calc(10% - 15px); /* Flex-grow, flex-shrink e flex-basis para melhor controle */
-  max-width: calc(20% - 10px); /* Ajuste a largura conforme necessário */
 }
 
 .product-card-wrapper a {
@@ -308,23 +325,24 @@ body main {
 
 .single-line-name {
   white-space: nowrap;
-  overflow: hidden; /* Opcional: esconde o texto que não cabe na linha */
-  text-overflow: ellipsis; /* Opcional: adiciona reticências ao final do texto que não cabe */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn__primary {
   background-color: #28a745;
-  color: rgb(255, 255, 255);
+  color: #fff;
   border: none;
-  padding: 8px 16px;
+  padding: 5px 10px;
+  cursor: pointer;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 1rem;
 }
 
 .btn__primary:hover {
   background-color: #0056b3;
-  transform: scale(1.05); /* Efeito de ampliação */
+  transform: scale(1.05);
 }
 
 .product-img img {
@@ -339,10 +357,9 @@ body main {
 }
 
 .product-title {
-  white-space: nowrap; /* Impede que o texto quebre para a próxima linha */
-  display: block;
-  overflow: hidden; /* Oculta o texto que excede o limite */
-  text-overflow: ellipsis; /* Adiciona '...' no final do texto cortado */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1rem;
   font-weight: bold;
   color: #fffdfd;
@@ -352,12 +369,12 @@ body main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.875rem; /* Ajuste o tamanho da fonte conforme necessário */
+  font-size: 0.875rem;
 }
 
 .product-discount__price {
   color: #ffffff;
-  font-size: 1rem; /* Ajuste o tamanho da fonte do preço */
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -412,7 +429,6 @@ body main {
   gap: 20px;
 }
 
-/* Responsividade para a header dos jogos */
 @media (max-width: 768px) {
   .products-dock-header div {
     display: flex;
@@ -435,22 +451,22 @@ body main {
 @media (max-width: 768px) {
   .products-cards {
     flex-direction: row;
-    flex-wrap: nowrap; /* Impede a quebra de linha */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    flex-wrap: nowrap;
+    overflow-x: auto;
     padding: 10px;
     margin: 0;
   }
 
   .grid-container {
-    margin: 0; /* Remove margens da grid-container */
-    padding: 0 10px; /* Adiciona padding horizontal para manter um pouco de espaço */
-    width: 100%; /* Garante que a largura seja 100% */
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
   }
 
   .product-card-wrapper {
-    flex: 0 0 20%; /* Define a largura dos cards para 20% */
-    max-width: 20%; /* Garante que a largura máxima dos cards seja 20% */
-    margin: 0 5px; /* Adiciona margem horizontal entre os cards */
+    flex: 0 1 auto;
+    max-width: 100%;
+    margin: 0;
   }
 
   .product-title {
@@ -497,7 +513,7 @@ body main {
   }
 
   .product-img {
-    margin-top: 0; 
+    margin-top: 0;
   }
 
   .product-img img {
@@ -516,8 +532,8 @@ body main {
   .single-line-name {
     font-size: 0.9rem;
     white-space: nowrap;
-    overflow: hidden; /* Opcional: esconde o texto que não cabe na linha */
-    text-overflow: ellipsis; /* Opcional: adiciona reticências ao final do texto que não cabe */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .btn__primary {
