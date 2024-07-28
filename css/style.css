@@ -435,6 +435,8 @@ body main {
 @media (max-width: 768px) {
   .products-cards {
     flex-direction: row;
+    flex-wrap: nowrap; /* Impede a quebra de linha */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
     padding: 10px;
     margin: 0;
   }
@@ -446,9 +448,9 @@ body main {
   }
 
   .product-card-wrapper {
-    flex: 0 1 auto;
-    max-width: 100%;
-    margin: 0;
+    flex: 0 0 20%; /* Define a largura dos cards para 20% */
+    max-width: 20%; /* Garante que a largura máxima dos cards seja 20% */
+    margin: 0 5px; /* Adiciona margem horizontal entre os cards */
   }
 
   .product-title {
@@ -495,7 +497,7 @@ body main {
   }
 
   .product-img {
-    margin-top: 0; /* Remove o espaçamento no topo */
+    margin-top: 0; 
   }
 
   .product-img img {
