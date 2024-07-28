@@ -457,14 +457,13 @@ body main {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding: 20px 0;
   flex-wrap: wrap;
 }
 
 .Farticle-FooterSubMenu .grid-container {
-  max-width: 1200px; /* Ajuste para ser consistente com outros containers */
+  max-width: 1200px;
   width: 100%;
-  padding: 0 20px; /* Adiciona padding lateral se necessário */
 }
 
 .Farticle-FooterSubMenu .row {
@@ -506,9 +505,9 @@ body main {
   margin-bottom: 10px;
 }
 
-
 .Farticle-FooterSocial {
   background-color: #262626;
+  padding: 20px;
 }
 
 footer {
@@ -545,17 +544,21 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-  .Farticle-FooterSubMenu .grid-container {
-    padding: 0 15px;
-  }
-
   .Farticle-FooterSubMenu .row {
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
   .Farticle-FooterSubMenu .col-xs-12 {
     width: 100%;
     padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Farticle-FooterSubMenu .col-xs-12 h4,
+  .Farticle-FooterSubMenu .col-xs-12 ul {
+    text-align: center;
   }
 }
