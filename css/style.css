@@ -409,62 +409,60 @@ body main {
   gap: 20px;
 }
 
-/* Regras de Mídia para Responsividade */
-@media (max-width: 1024px) {
-  .product-card-wrapper {
-    flex: 1 1 calc(25% - 10px); /* Quatro colunas */
-    max-width: calc(25% - 10px); /* Ajuste a largura conforme necessário */
-  }
-}
-
+/* Responsividade para a header dos jogos */
 @media (max-width: 768px) {
-  .product-card-wrapper {
-    flex: 1 1 calc(33.333% - 10px); /* Três colunas */
-    max-width: calc(33.333% - 10px); /* Ajuste a largura conforme necessário */
-  }
-
-  .products-dock-header > div {
-    flex-direction: column;
+  .products-dock-header div {
+    flex-direction: row;
     align-items: flex-start;
   }
 
-  .products-dock-header > div > h2,
-  .products-dock-header > div > a {
-    width: 100%;
-    text-align: left;
+
+  .btn__primary.btn__small {
+    width: 30%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .products-dock-subtitle {
+    font-size: 1rem;
+    margin-top: 5px;
   }
 }
 
-@media (max-width: 480px) {
+/* Ajustes de responsividade para os cards de produto */
+@media (max-width: 768px) {
   .product-card-wrapper {
-    flex: 1 1 calc(20% - 5px); /* Cinco colunas */
-    max-width: calc(20% - 5px); /* Ajuste a largura conforme necessário */
-    margin: 0; /* Remove margens */
-    padding: 5px; /* Reduz padding */
+    flex: 0 1  auto; 
+    max-width: auto;
+    flex-direction: row;
+  }
+
+  .product-card--content {
+    padding: 10px;
   }
 
   .product-title {
-    font-size: 0.7rem; /* Reduz tamanho da fonte */
+    font-size: 0.9rem; /* Ajuste o tamanho da fonte para telas menores */
   }
 
-  .product-button--text {
-    font-size: 0.6rem; /* Reduz tamanho da fonte */
-  }
-
-  .product-img img {
-    width: 100%;
-    height: auto;
-  }
-
-  .products-dock-header > div {
-    flex-direction: column;
+  .product-info {
+    flex-direction: row;
     align-items: flex-start;
+    gap: 10px;
   }
 
-  .products-dock-header > div > h2,
-  .products-dock-header > div > a {
-    width: 100%;
-    text-align: left;
+  .product-button {
+    width: auto;
+    text-align: center;
+  }
+
+  .wishlist-btn img {
+    width: 1.5rem; 
+    height: 1.5rem;
+  }
+
+  .product-discount__badge {
+    font-size: auto;
   }
 }
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
