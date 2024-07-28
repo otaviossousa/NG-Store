@@ -458,20 +458,24 @@ body main {
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  flex-wrap: wrap;
 }
 
 .Farticle-FooterSubMenu .grid-container {
-  max-width: 1200px; /* Ajuste para ser consistente com outros containers */
+  max-width: 1200px;
   width: 100%;
-  padding: 0 20px; /* Adiciona padding lateral se necessário */
+  padding: 0 20px;
 }
 
 .Farticle-FooterSubMenu .row {
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Garante que as colunas fiquem lado a lado */
   justify-content: space-between;
+  width: 100%;
+}
+
+.Farticle-FooterSubMenu .col {
+  flex: 1 1 auto;
+  min-width: 200px; /* Largura mínima para manter as colunas lado a lado */
 }
 
 .Farticle-FooterSubMenu ul {
@@ -483,17 +487,12 @@ body main {
 .Farticle-FooterSubMenu ul li {
   display: flex;
   align-items: center;
-  list-style-type: none;
-  color: #ffffff;
-  text-decoration: none;
-  white-space: nowrap;
   margin-bottom: 5px;
 }
 
 .Farticle-FooterSubMenu ul li a {
   color: #ffffff;
   text-decoration: none;
-  white-space: nowrap;
 }
 
 .Farticle-FooterSubMenu ul li a:hover {
@@ -502,10 +501,8 @@ body main {
 
 .footer h4 {
   color: #00a000;
-  text-align: left;
   margin-bottom: 10px;
 }
-
 
 .Farticle-FooterSocial {
   background-color: #262626;
@@ -545,17 +542,12 @@ footer .container {
 }
 
 @media (max-width: 768px) {
-  .Farticle-FooterSubMenu .grid-container {
-    padding: 0 15px;
-  }
-
   .Farticle-FooterSubMenu .row {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap; /* Garante que as colunas fiquem lado a lado */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
   }
 
-  .Farticle-FooterSubMenu .col-xs-12 {
-    width: 100%;
-    padding: 10px 0;
+  .Farticle-FooterSubMenu .col {
+    flex: 0 0 auto; /* Garante que as colunas mantenham seu tamanho */
   }
 }
