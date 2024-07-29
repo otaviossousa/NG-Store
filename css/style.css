@@ -145,6 +145,10 @@ body main {
 
 .card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px; 
+  width: 100%; 
+  margin: 0 1rem;
+  padding: 1rem; 
 }
 
 .card-title {
@@ -189,24 +193,25 @@ body main {
 
 /* Media Queries para dispositivos móveis */
 @media (max-width: 768px) {
+  .card {
+    max-width: 90%; /* Garante que o card ocupe quase toda a largura disponível em telas menores */
+    padding: 1rem; /* Adiciona padding interno */
+    margin: 0 1rem; /* Mantém uma margem lateral */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-label img {
+    width: 20px; /* Ajusta o tamanho dos ícones para telas menores */
+    height: 20px; /* Ajusta o tamanho dos ícones para telas menores */
+  }
+  
   .card-title {
-    font-size: 1.2rem; 
+    font-size: 1.2rem; /* Ajusta o tamanho do título para telas menores */
   }
 
   .btn-custom {
-    flex-direction: column; 
-    gap: 3px; 
-  }
-
-  .btn-custom img.btn-icon {
-    width: 18px; 
-    height: 18px; 
-  }
-
-  .form-icon {
-    width: 25px; 
-    height: 25px; 
-    margin-right: 3px; 
+    font-size: 0.9rem; /* Ajusta o tamanho do botão para telas menores */
   }
 }
 
