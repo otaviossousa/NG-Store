@@ -186,6 +186,30 @@ body main {
   margin-right: 5px;
   vertical-align: middle;
 }
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.2rem; 
+  }
+
+  .btn-custom {
+    flex-direction: column; 
+    gap: 3px; 
+  }
+
+  .btn-custom img.btn-icon {
+    width: 18px; 
+    height: 18px; 
+  }
+
+  .form-icon {
+    width: 25px; 
+    height: 25px; 
+    margin-right: 3px; 
+  }
+}
+
 /* -----------------------------------------------------------< Login >----------------------------------------------------------------*/
 
 /* -----------------------------------------------------------< Pagina principal >------------------------------------------------------*/
