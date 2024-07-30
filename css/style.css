@@ -4,12 +4,6 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
 /* --------------------------------------------------------------< Header >------------------------------------------------------------- */
 
 header {
@@ -93,6 +87,23 @@ header {
   width: 100%;
 }
 
+.navbar-toggler {
+  background: transparent;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+  transition: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-toggler svg {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .container-header-1 {
@@ -136,6 +147,17 @@ header {
   .navbar-nav .nav-link {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .navbar-toggler-icon {
+    width: 30px; /* Ajuste conforme necessário */
+    height: 30px; /* Ajuste conforme necessário */
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgc2Nyb2xsaW5nPSJjcm9zcyIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjUgMTJhLjUuNSAwIDAgMSAuNS41IEgzYSAuNS41IDAgMCAxIC0uNS41IG0wLTRhLjUuNSA0IDAgMSAwLjc1LTIuNzYgbS0uNS0uNSAyLjc1LTIuNzYgMC0uNSAuNSIgLz4KPC9zdmc+'); /* SVG em Base64 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none; /* Remove a borda se necessário */
+    cursor: pointer; /* Adiciona cursor pointer */
   }
 }
 
@@ -213,27 +235,27 @@ body main {
   vertical-align: middle;
 }
 
-/* Media Queries para dispositivos móveis */
+
 @media (max-width: 768px) {
   .card {
-    max-width: 90%; /* Garante que o card ocupe quase toda a largura disponível em telas menores */
-    padding: 1rem; /* Adiciona padding interno */
-    margin: 0 1rem; /* Mantém uma margem lateral */
+    max-width: 90%; 
+    padding: 1rem; 
+    margin: 0 1rem; 
   }
 }
 
 @media (max-width: 480px) {
   .form-label img {
-    width: 20px; /* Ajusta o tamanho dos ícones para telas menores */
-    height: 20px; /* Ajusta o tamanho dos ícones para telas menores */
+    width: 20px; 
+    height: 20px; 
   }
   
   .card-title {
-    font-size: 1.2rem; /* Ajusta o tamanho do título para telas menores */
+    font-size: 1.2rem; 
   }
 
   .btn-custom {
-    font-size: 0.9rem; /* Ajusta o tamanho do botão para telas menores */
+    font-size: 0.9rem; 
   }
 }
 
