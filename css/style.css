@@ -31,7 +31,7 @@ header {
   height: auto;
 }
 
-.container-header {
+.container-header-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,7 +74,10 @@ header {
 }
 
 .navbar-nav .nav-link {
-  margin-right: 60px;
+  margin-right: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navbar-nav {
@@ -83,13 +86,7 @@ header {
   flex-wrap: nowrap;
 }
 
-.header-main-menu-button {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.second-container {
+.container-header-2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,39 +94,66 @@ header {
 }
 
 
+
 /* Responsividade */
 @media (max-width: 768px) {
-  .container-header {
-    flex-direction: row;
+  .container-header-1 {
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
   }
 
   .header-site-logo {
-    flex: 0 1 auto;
+    margin-bottom: 10px;
   }
 
   .search-bar {
     flex: 1;
     max-width: 100%; 
-    margin: 0 10px;
+    margin: 0 10px 10px 10px;
   }
 
   .icons {
     flex: 0 1 auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 
-  /* Segundo container*/
-
-  .second-container {
+  .container-header-2 {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap; /* Garante que os itens não quebrem para uma nova linha */
+    justify-content: center; 
+    flex-wrap: nowrap;
     width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-nav .nav-link {
+    margin-right: 0;
+    margin-bottom: 5px;
+    font-size: 0.9rem; 
+  }
+
+  .search-bar input {
+    padding-right: 30px; 
+  }
+
+  .icons img {
+    width: 30px; 
   }
 }
 /* ------------------------------------------------------------< Main >--------------------------------------------------------------- */

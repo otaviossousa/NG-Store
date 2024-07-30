@@ -21,28 +21,25 @@
   </head>
   <body>
     <div class="header">
-      <!-- Cabeçalho-->
+      <!-- Cabeçalho -->
       <header>
-        <!-- Primeiro Container-->
-        <div class="container-header grid-container">
-          <!-- Logo da loja-->
+        <!-- Primeiro Container -->
+        <div class="container-header-1 grid-container">
+          <!-- Logo da loja -->
           <div class="header-site-logo">
             <a href="index.html">
-              <img id="logo-ng-store" src="images/logo/logo-ng-store.png" alt="Logo da Loja"/>
+              <img id="logo-ng-store" src="images/logo/logo-ng-store.png" alt="Logo da Loja" />
             </a>
           </div>
-      
-          <!-- Barra de Pesquisa-->
-          <div class="container">
-            <!-- Barra de Pesquisa-->
-            <div class="search-bar">
-              <form class="d-flex">
-                <input class="form-control me-1" type="search" placeholder="Digite o que você procura..." aria-label="Pesquisar" />
-                <img src="images/icones/icone-pesquisa.png" alt="Ícone Pesquisa" class="search-icon" />
-              </form>
-            </div>
+    
+          <!-- Barra de Pesquisa -->
+          <div class="search-bar">
+            <form class="d-flex">
+              <input class="form-control me-1" type="search" placeholder="Digite o que você procura..." aria-label="Pesquisar" />
+              <img src="images/icones/icone-pesquisa.png" alt="Ícone Pesquisa" class="search-icon" />
+            </form>
           </div>
-      
+    
           <!-- Ícones (Login, Favoritos, Carrinho) -->
           <div class="icons">
             <div class="login-icon">
@@ -50,13 +47,13 @@
                 <img src="images/icones/icone-login.png" alt="Ícone Login" />
               </a>
             </div>
-      
+    
             <div class="favorites-icon">
               <a href="/favoritos.html">
                 <img src="images/icones/icone-favoritos.png" alt="Ícone Favoritos" />
               </a>
             </div>
-      
+    
             <div class="cart-icon">
               <a href="/carrinho.html">
                 <img src="images/icones/icone-carrinho.png" alt="Ícone Carrinho" />
@@ -64,64 +61,21 @@
             </div>
           </div>
         </div>
-      
+    
         <!-- Segundo Container -->
-        <div class="grid-container second-container">
-          <!-- Menu de Departamentos -->
-          <div class="header-main-menu-button">
-            <button
-              id="btnzin"
-              class="btn"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasWithBothOptions"
-              aria-controls="offcanvasWithBothOptions">
-              <img src="images/icones/icone-menu.png" alt="Ícone Menu" />
-            </button>
-            <span>DEPARTAMENTOS</span>
-            <div
-              class="offcanvas offcanvas-start"
-              data-bs-scroll="true"
-              tabindex="-1"
-              id="offcanvasWithBothOptions"
-              aria-labelledby="offcanvasWithBothOptionsLabel"
-            >
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-                  Backdrop with scrolling
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="offcanvas-body">
-                <p>
-                  Try scrolling the rest of the page to see this option in action.
-                </p>
-              </div>
-            </div>
-          </div>
-
+        <div class="container-header-2 grid-container">
           <!-- Menu de Categorias -->
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
 
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/dept.html">DEPARTAMENTOS</a>
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/categoria1.html">PROMOÇÕES</a>
                   </li>
@@ -143,7 +97,7 @@
           </nav>
         </div>
       </header>
-    </div>
+    </div> 
   
     <div class="main">
       <!-- Conteúdo -->
