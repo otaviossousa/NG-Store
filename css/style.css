@@ -93,8 +93,6 @@ header {
   width: 100%;
 }
 
-
-
 /* Responsividade */
 @media (max-width: 768px) {
   .container-header-1 {
