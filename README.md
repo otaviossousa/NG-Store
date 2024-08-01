@@ -11,7 +11,7 @@ Este projeto foi desenvolvido como parte do teste Front-End do curso Fullstack d
 
 Os protótipos de baixa e alta fidelidade do site foram criados na ferramenta Figma. Você pode visualizar e explorar os protótipos através dos links abaixo:
 
-- [Protótipo de Alta Fidelidade](https://www.figma.com/design/5RRgghDZbxijlLHDcVVjv0/Senai---Prototipo-Alta-Fidelidade-2?m=auto&t=qj4goIqVgvgrNqxe-6)
+- [Protótipo de Alta e Baixa Fidelidade](https://www.figma.com/design/5RRgghDZbxijlLHDcVVjv0/Senai---Prototipo-Alta-Fidelidade-2?m=auto&t=qj4goIqVgvgrNqxe-6)
 
 ## Funcionalidades
 
