@@ -16,7 +16,7 @@ Os protótipos de baixa e alta fidelidade do site foram criados na ferramenta Fi
 ## Funcionalidades
 
 - **Página Principal**: Exibe produtos em destaque, banners, categorias e uma barra de pesquisa.
-- **Página de Login**: Permite que os usuários façam login para acessar suas contas, o usuário e senha padrão é **admin** / **admin**
+- **Página de Login**: Permite que os usuários façam login para acessar suas contas, o usuário : **admin** e senha: **admin** para testes.
 - **Responsividade**: O site é responsivo e ajusta-se a diferentes tamanhos de tela.
 
 ## Tecnologias Utilizadas
